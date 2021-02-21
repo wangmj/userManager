@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "v0GZEcdTRb1ui9namsD/R0D21lyyCKP07MhkyVR8Vw2mkCYmVajgVovkz2r/BvR7445b7zj6eHiSmtEjtmkP7A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mingjie\\Documents\\0-PersonSpace\\0-project\\2-SelfSpace\\5-userManager\\Server\\wmj.userManagerServer.ViewModel\\wmj.userManagerServer.ViewModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mingjie\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\mingjie\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

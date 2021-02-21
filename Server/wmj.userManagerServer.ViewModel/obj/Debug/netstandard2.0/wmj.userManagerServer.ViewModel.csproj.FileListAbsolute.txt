@@ -1,0 +1,9 @@
+C:\Users\mingjie\Documents\0-PersonSpace\0-project\2-SelfSpace\5-userManager\Server\wmj.userManagerServer.ViewModel\bin\Debug\netstandard2.0\wmj.userManagerServer.ViewModel.deps.json
+C:\Users\mingjie\Documents\0-PersonSpace\0-project\2-SelfSpace\5-userManager\Server\wmj.userManagerServer.ViewModel\bin\Debug\netstandard2.0\wmj.userManagerServer.ViewModel.dll
+C:\Users\mingjie\Documents\0-PersonSpace\0-project\2-SelfSpace\5-userManager\Server\wmj.userManagerServer.ViewModel\bin\Debug\netstandard2.0\wmj.userManagerServer.ViewModel.pdb
+C:\Users\mingjie\Documents\0-PersonSpace\0-project\2-SelfSpace\5-userManager\Server\wmj.userManagerServer.ViewModel\obj\Debug\netstandard2.0\wmj.userManagerServer.ViewModel.csprojAssemblyReference.cache
+C:\Users\mingjie\Documents\0-PersonSpace\0-project\2-SelfSpace\5-userManager\Server\wmj.userManagerServer.ViewModel\obj\Debug\netstandard2.0\wmj.userManagerServer.ViewModel.AssemblyInfoInputs.cache
+C:\Users\mingjie\Documents\0-PersonSpace\0-project\2-SelfSpace\5-userManager\Server\wmj.userManagerServer.ViewModel\obj\Debug\netstandard2.0\wmj.userManagerServer.ViewModel.AssemblyInfo.cs
+C:\Users\mingjie\Documents\0-PersonSpace\0-project\2-SelfSpace\5-userManager\Server\wmj.userManagerServer.ViewModel\obj\Debug\netstandard2.0\wmj.userManagerServer.ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\mingjie\Documents\0-PersonSpace\0-project\2-SelfSpace\5-userManager\Server\wmj.userManagerServer.ViewModel\obj\Debug\netstandard2.0\wmj.userManagerServer.ViewModel.dll
+C:\Users\mingjie\Documents\0-PersonSpace\0-project\2-SelfSpace\5-userManager\Server\wmj.userManagerServer.ViewModel\obj\Debug\netstandard2.0\wmj.userManagerServer.ViewModel.pdb
