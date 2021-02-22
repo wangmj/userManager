@@ -19,7 +19,6 @@
   <ItemGroup>
     <ProjectReference Include="..\wmj.userManagerServer.Domain\wmj.userManagerServer.Domain.csproj" />
     <ProjectReference Include="..\wmj.userManagerServer.Infra\wmj.userManagerServer.Infra.csproj" />
-    <ProjectReference Include="..\wmj.userManagerServer.ViewModel\wmj.userManagerServer.ViewModel.csproj" />
   </ItemGroup>
 
 </Project>

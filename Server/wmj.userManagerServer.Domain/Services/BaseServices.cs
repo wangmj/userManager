@@ -4,31 +4,31 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore;
-
+using wmj.userManagerServer.Domain.Interfaces;
 using wmj.userManagerServer.Domain.Models;
 using wmj.userManagerServer.Infra;
 
 namespace wmj.userManagerServer.Domain.Services
 {
-    public abstract class BaseServices<TEntity, TId> where TEntity : BaseEntity<TId>
+    public class BaseServices<TEntity, TId> : IBaseServices<TEntity, TId> where TEntity : BaseEntity<TId>
     {
         protected AppDbContext DbContext;
 
-        protected BaseServices(AppDbContext dbContext)
+        public BaseServices(AppDbContext dbContext)
         {
             DbContext = dbContext;
         }
 
-        protected DbSet<TEntity> Entry => DbContext.Maintain<TEntity>();
+        protected  DbSet<TEntity> Entry => DbContext.Maintain<TEntity>();
         public TEntity Get(TId id)
         {
-            return Entry.FirstOrDefault(x=>x.Id.Equals(id));
+            return Entry.FirstOrDefault(x => x.Id.Equals(id));
         }
-        public IList<TEntity> Get(Func<TEntity, bool> predicate)
+        public IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
         {
-            return Entry.Where(predicate).ToList();
+            return Entry.Where(predicate);
         }
-        public IEnumerable<TEntity> GetEnumerable(Func<TEntity,bool> predicate)
+        public IEnumerable<TEntity> GetEnumerable(Func<TEntity, bool> predicate)
         {
             return Entry.Where(predicate);
         }
@@ -64,7 +64,8 @@ namespace wmj.userManagerServer.Domain.Services
                 SaveChanges();
             }
         }
-        protected void SaveChanges(bool acceptAllChangesOnSuccess = true)
+
+        public void SaveChanges(bool acceptAllChangesOnSuccess = true)
         {
             DbContext.SaveChanges(acceptAllChangesOnSuccess);
         }

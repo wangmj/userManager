@@ -13,6 +13,10 @@ using wmj.userManagerServer.Domain.Models;
 using wmj.userManagerServer.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using wmj.userManagerServer.Domain.Interfaces;
+using wmj.userManagerServer.Domain.Services;
+using FluentValidation.AspNetCore;
 
 namespace wmj.userManagerServer
 {
@@ -31,13 +35,14 @@ namespace wmj.userManagerServer
             AppConfig appConfig = new AppConfig();
             Configuration.GetSection("AppConfig").Bind(appConfig);
             services.Configure<AppConfig>(Configuration.GetSection("AppConfig"));
-            services.AddDbContext<AppDbContext>(builder=>builder.UseInMemoryDatabase("ums"));
+            services.AddDbContext<AppDbContext>(builder => builder.UseInMemoryDatabase("ums"));
             services.AddControllers(options => options.Filters.Add<AppUserFilter>()).
-                AddJsonOptions(options=>{ options.JsonSerializerOptions.PropertyNameCaseInsensitive=true;});
+                AddJsonOptions(options => { options.JsonSerializerOptions.PropertyNameCaseInsensitive = true; });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "wmj.userManagerServer", Version = "v1" });
             });
+            services.AddMvc().AddFluentValidation(x => x.RegisterValidatorsFromAssembly(typeof(AppUser).Assembly));
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(builder =>
@@ -68,6 +73,9 @@ namespace wmj.userManagerServer
                 });
 
             services.AddSingleton<SessionUser>();
+            services.TryAddTransient<ITokenServices, TokenServices>();
+            services.TryAddTransient(typeof(IBaseServices<,>), typeof(BaseServices<,>));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

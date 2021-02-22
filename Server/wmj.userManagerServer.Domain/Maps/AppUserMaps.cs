@@ -10,6 +10,8 @@ namespace wmj.userManagerServer.Domain.Maps
     {
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
+            builder.ToTable("AppUser").HasKey(x => x.Id);
+            builder.Property(x => x.Id).ValueGeneratedOnAdd();
         }
     }
 }
